@@ -1,7 +1,7 @@
 {
-  "name": "todo-list",
+  "name": "artsy",
   "version": "1.0.0",
-  "description": "",
+  "description": "A photo gallery that serves creators & collectors of art and photography generally",
   "private": true,
   "scripts": {
     "watch": "webpack --watch",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fmanimashaun/webpack-boilerplate.git"
+    "url": "git+https://github.com/fmanimashaun/artsy.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["photography", "art", "gallery"],
+  "author": "Engr. Animashaun Fisayo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fmanimashaun/webpack-boilerplate/issues"
+    "url": "https://github.com/fmanimashaun/artsy/issues"
   },
-  "homepage": "https://github.com/fmanimashaun/webpack-boilerplate#readme",
+  "homepage": "https://github.com/fmanimashaun/artsy#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
