@@ -34,15 +34,15 @@ module.exports = {
     }
   })).concat([
     new MiniCssExtractPlugin({
-      filename: "css/[name].css",
-      chunkFilename: "[id].css"
+      filename: 'css/[name].css',
+      chunkFilename: '[id].css'
     })
   ]),
-  output: {
+  output:{
     filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    assetModuleFilename: 'assets/[name][ext][query]'
+    assetModuleFilename: 'assets/[name][ext][query]',
   },
   optimization: {
     splitChunks: {
