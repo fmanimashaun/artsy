@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkartsy=self.webpackChunkartsy||[]).push([[179],{971:()=>{}},s=>{s(s.s=971)}]);

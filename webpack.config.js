@@ -1,22 +1,43 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const pages = ['index', 'marketplace', 'auctions', 'drops'];
+
 module.exports = {
   mode: 'production',
-  entry: './src/js/index.js',
+  entry: pages.reduce((entries, page) => {
+    if (page === 'index') {
+      entries[page] = `./src/js/${page}.js`;
+    } else {
+      entries[page] = `./src/js/components/${page}.js`;
+    }
+      return entries;
+  }, {}),
   devServer: {
     static: './dist',
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
-    new MiniCssExtractPlugin(
-      {
-        filename: 'css/[name].css',
-      }
-    )
-  ],
+  plugins: [].concat(pages.map(page => {
+    if (page === 'index') {
+      return new HtmlWebpackPlugin({
+        inject: true,
+        template: `./src/${page}.html`,
+        filename: `${page}.html`,
+        chunks: [page],
+      });
+    } else {
+      return new HtmlWebpackPlugin({
+        inject: true,
+        template: `./src/components/${page}.html`,
+        filename: `components/${page}.html`,
+        chunks: [page],
+      });
+    }
+  })).concat([
+    new MiniCssExtractPlugin({
+      filename: "css/[name].css",
+      chunkFilename: "[id].css"
+    })
+  ]),
   output: {
     filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
@@ -24,7 +45,9 @@ module.exports = {
     assetModuleFilename: 'assets/[name][ext][query]'
   },
   optimization: {
-    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
