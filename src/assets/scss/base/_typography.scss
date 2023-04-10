@@ -5,3 +5,15 @@ body {
   color: $text-color;
   font: normal 125% / 1.4 $text-font-stack;
 }
+
+.logo {
+  font-family: $logo-font-stack;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.8125em;
+  color: $logo-color;
+}
+
+header {
+  border: 1px solid red;
+}
