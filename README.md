@@ -43,17 +43,15 @@ Artsy is a photo gallery that serves creators & collectors of art and photograph
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [JavaScript/ES6](https://262.ecma-international.org/6.0/)
-- [webpack 5](https://webpack.js.org/)
 - [npm](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com)
 - [Stylelinter](https://stylelint.io/)
 - [ESLint](https://eslint.org/)
-- [Webhint](https://webhint.io/)
-- [Lighthouse](https://ethcar.github.io/lighthouse/)
 - [SASS](https://sass-lang.com/)
-- [figma](https://www.figma.com/)
-- [react]()
+- [Figma](https://www.figma.com/)
+- [React]()
+- [React router]()
 
 ### Key Features <a name="key-features"></a>
 
