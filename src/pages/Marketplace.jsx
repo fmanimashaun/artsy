@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from 'components/Header';
 
-const Home = () => {
-  const message = 'Home page';
+const MarketPlace = () => {
+  const message = 'Marketplace page';
   return (
     <>
       <Header />
@@ -11,4 +11,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MarketPlace;
